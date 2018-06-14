@@ -15,8 +15,26 @@ class Detail extends React.Component {
         };
     }
     componentDidMount() {
+        console.log('Component has been mounted', this.props);
+
         const currencyId = this.props.match.params.id;
 
+        this.fetchCurrency(currencyId);
+
+
+    }
+
+    componentWillReceiveProps(nextProps) {
+        console.log('Component has been updated', nextProps);
+        if (this.props.location.pathname !== nextProps.location.pathname) {
+            // Get new currency id from url
+            const newCurrencyId = nextProps.match.params.id
+
+            this.fetchCurrency(newCurrencyId);
+        }
+    }
+
+    fetchCurrency(currencyId) {
         this.setState({ loading: true });
 
         console.log('currencyId', currencyId);

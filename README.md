@@ -1,6 +1,6 @@
 # ReactCoin
 
-A React application that allows you to look up the latest financial information about all your favorite cryptocurrencies and see how well they are performing in the digital currency market. 
+A React application that allows you to look up the latest financial information about all your favorite cryptocurrencies and see how well they are performing in the digital currency market.
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
@@ -37,6 +37,10 @@ Deployed on Now: <https://react-coin-vmpjkgdhtn.now.sh>
 
 <img src="readme_images/autocomplete.png">
 
+### Pagination feature
+
+<img src="readme_images/pagination.png">
+
 ## <a name="about-this-project"></a> About this project
 
 * [How the app works](#how-app-works)
@@ -53,7 +57,6 @@ If you want to know more information about a particular currency, simply click t
 If you are having difficulty finding a particular currency in the long list, it might be better to just use the Search box at the top of the page. The search box includes an autocomplete feature. So, you just have to start typing the first few letters of the currency you want to look up, and the app will show the currencies that match those letters. If the app can't find a result, the app will display "No results found" in the search results.
 
 And, that's pretty much it. It's pretty simple to use, and it was fun to create. I plan to add more cool, interesting features to the app soon. See [Direction for future development](#future) to find out where this app is headed next. Stay tuned...
-
 
 ### <a name="how-the-app-is-built"></a> How the app is built
 
@@ -85,7 +88,6 @@ To set up this application locally on your computer, perform the following steps
 
 5. [Start the React development server](#start-server)
 
-
 ### <a name="clone-repository"></a> 1. Clone the repository
 
 The first step is to clone the project repository to a local directory on your computer. To clone the repository, run the following commands:
@@ -115,9 +117,8 @@ The first step is to clone the project repository to a local directory on your c
   * Allows the app to serve static content.
   * Starts the Express server.
   * Defines the port the server is listening on.
-* <b>static.json</b>: 
+* <b>static.json</b>: Used to build and serve static app.
 * <b>yarn.lock</b>: Dependency tree for the project. Lists all the dependencies and their versions.
-
 
 ### <a name="install-node"></a> 2. Install Node.js
 
@@ -163,7 +164,6 @@ yarn start
 
 <p><b>Troubleshooting tip</b>: If you are still unable to see the application in the browser at <a href="http://localhost:3000">http://localhost:9000</a>, ensure that no other applications/processes are using port 9000. If port 9000 is in use by another process, kill that process and then restart the server.</p>
 
-
 ## <a name="react-deployment"></a> Deployment
 
 This app is deployed to Heroku. To deploy the app, you will need to build a production version of the app as well as have Heroku CLI installed.
@@ -171,6 +171,7 @@ This app is deployed to Heroku. To deploy the app, you will need to build a prod
 1. Download and install the Heroku CLI. You can install the Heroku CLI <a href="https://devcenter.heroku.com/articles/heroku-cli">here</a>.</p>
 
 2. If you haven't already, log in to your Heroku account and follow the prompts to create a new SSH public key.
+
 <pre>heroku login</pre>
 
 3. Change directory to the project root directory (<b>ReactCoin</b>).

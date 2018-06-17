@@ -46,7 +46,7 @@ Deployed on Now: <https://react-coin-vmpjkgdhtn.now.sh>
 
 When you navigate to the app home page, the app retrieves a list of currencies and the latest financial data about each currency using the [Cryptocurrencies JSON API](https://udilia.com/docs/cryptocurrencies/v1). The currencies are ordered based on market cap value. So, obviously, Bitcoin is ranked #1 because it has the highest market value. The home page displays the price, market cap, and percent changed in the last 24 hours for each currency. 
 
-By default, the app only displays the top 20 currencies. To see more currencies, scroll down to the bottom of the page and click on the right arrow to view more. Click the left arrow to go back to a previous page.
+By default, the app only displays the top 20 currencies. To see more currencies, scroll down to the bottom of the page and click the right arrow to view more. Click the left arrow to go back to a previous page.
 
 If you want to know more information about a particular currency, simply click the name of the currency in the list. The currency name is a link, which takes you to another a page in the app that has all the information about the currency you clicked, including price, rank, percent changed in the last 24 hours, market cap, 24 hour volume, and total supply.
 
@@ -98,16 +98,16 @@ The first step is to clone the project repository to a local directory on your c
 
 <p>After you clone the repository, navigate to the project root directory (ReactCoin). The project directory structure is set up as follows:</p>
 
-* <b>build</b>: This folder contains a build of the app optimized for production use. This folder will only appear within the project root directory if you kicked off a production build by running yarn build. If you haven't created a production build yet, then this folder will not be visible within the project root directory. For information about kicking off a production build, see [Deployment](#react-deployment).
+* <b>build</b>: This folder contains a build of the app optimized for production use. This folder will only appear within the project root directory if you kicked off a production build by running the <b>yarn build</b> command. If you haven't created a production build yet, then this folder will not be visible within the project root directory. For information about kicking off a production build, see [Deployment](#react-deployment).
 * <b>node_modules</b>: This folder contains the project dependencies. It is ignored by git when committed to GitHub and Heroku. You install the project dependencies by running <b>yarn install</b> from the project root directory. For more information about installing dependencies for this project, go to [Install the dependencies](#dependencies).
 * <b>public</b>: The public folder contains the index.html file. This HTML file is a template. The file is empty. So, if you open it directly in a browser, you will get an empty page. Rather than placing the HTML code directly in index.html, this app uses a React component-based architecture to create, build, and render UI components to the page. This folder also contains the favicon that is displayed on the browser tab.
 * <b>readme_images</b>: Contains the screenshots that are used in the project README file.
 * <b>src</b>: The src folder is where the React app components reside.
     * <b>components</b>: The components folder is where the React components are located and defined.
-    * <b>config.js</b>: The config.js contains the API root URL. The URL is exported so that the app can retrieve currency data using the cryptocurrency JSON API.
+    * <b>config.js</b>: The config.js file contains the API root URL. The URL is exported so that the app can retrieve currency data using the cryptocurrency JSON API.
     * <b>helpers.js</b>: Th helpers.js file contains helper functions that are used more than once in the app. They are kept in a single file to avoid duplicating code and to have a single source, which will help with maintaining the code in the future.
     * <b>index.css</b>: The external css stylesheet for the app.
-    * <b>index.js</b>: The index.js file is the top level file of the React app. In index.js, the App component is defined, the ReactDOM.render method is used to render the App, and the routes are defined using react-router-dom.
+    * <b>index.js</b>: The index.js file is the top level file of the React app. In index.js, the App component is defined, the ReactDOM.render method is used to render the App component, and the routes are defined using react-router-dom.
 * <b>.gitignore</b>: Anything listed inside this file (for example, node_modules) will not be tracked by GitHub or Heroku when code is committed.
 * <b>package.json</b>: Lists the project dependencies and their version numbers. It also contains various scripts to start the server and get a production build of the app for deployment.
 * <b>server.js</b>:This file does the following:
@@ -144,7 +144,7 @@ For more information about yarn and other installation options, see the yarn doc
   <li><b>react</b> - package for accessing React (https://www.npmjs.com/package/react)</li>
   <li><b>react-dom</b> - serves as the entry point of the DOM-related rendering paths (https://www.npmjs.com/package/react-dom).</li>
   <li><b>react-scripts</b>: package that includes scripts and configuration used by Create React App. (https://www.npmjs.com/package/react-scripts)</li>
-  <li><b>serve</b> - packaged used to serve a static single page application and provides an interface for listing the directory's contents(https://www.npmjs.com/package/serve).</li>
+  <li><b>serve</b> - packaged used to serve a static single page app. It also provides an interface for listing the directory's contents (https://www.npmjs.com/package/serve).</li>
 </ul>
 
 <p>Version information for each of these packages is available in the <b>package.json</b> file in the project root directory.</p>
@@ -159,9 +159,9 @@ For more information about yarn and other installation options, see the yarn doc
 yarn start
 </pre>
 
-<p>After the development server has started, a Chrome browser window should open, and you should see the application. If the browser does not automatically open after the server starts, you can verify that the application is working locally on your computer by manually opening Chrome and going to <a href="http://localhost:3000">http://localhost:3000</a>.</p>
+<p>After the development server has started, a Chrome browser window should open, and you should see the application. If the browser does not automatically open after the server starts, you can verify that the application is working locally on your computer by manually opening Chrome and going to <a href="http://localhost:9000">http://localhost:9000</a>.</p>
 
-<p><b>Troubleshooting tip</b>: If you are still unable to see the application in the browser at <a href="http://localhost:3000">http://localhost:3000</a>, ensure that no other applications/processes are using port 3000. If port 3000 is in use by another process, kill that process and then restart the server.</p>
+<p><b>Troubleshooting tip</b>: If you are still unable to see the application in the browser at <a href="http://localhost:3000">http://localhost:9000</a>, ensure that no other applications/processes are using port 9000. If port 9000 is in use by another process, kill that process and then restart the server.</p>
 
 
 ## <a name="react-deployment"></a> Deployment
@@ -173,13 +173,13 @@ This app is deployed to Heroku. To deploy the app, you will need to build a prod
 2. If you haven't already, log in to your Heroku account and follow the prompts to create a new SSH public key.
 <pre>heroku login</pre>
 
-3. Change directory to the project root directory (<b>ReactCoing</b>).
+3. Change directory to the project root directory (<b>ReactCoin</b>).
 
 4. If you have deployed the app before, delete the <b>ReactCoin/build</b> folder.
 
-5. Run the following command to build a clean production version of the app.
+5. Run the following command to build a clean, production version of the app.
 <pre>yarn build</pre>
-<p>This command creates a folder called <b>build</b> inside of the project root directory </p>
+<p>This command creates a folder called <b>build</b> inside the project root directory </p>
 
 6. Deploy your changes
 <pre>
@@ -193,7 +193,7 @@ git push heroku master
 
 For more information on deploying an app to Heroku, refer to the [Heroku documentation](https://www.heroku.com/).
 
-This app is also deployed to Now. For information on deploying an app to Now, refer to the [Now documentation](https://zeit.co/).
+This app is also deployed to Now. For information on deploying a static React app to Now, refer to the [Now documentation](https://zeit.co/).
 
 ## <a name="technologies-used"></a> Technologies used to build app
 
